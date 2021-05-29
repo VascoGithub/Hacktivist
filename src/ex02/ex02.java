@@ -109,29 +109,29 @@ public class ex02 {
         rows = targetGrid.length;
         cols = targetGrid[0].length;
         int[][] temp = new int[rows][cols];
-        Set<Integer> set = new HashSet<>();
+        Set<Integer> grid = new HashSet<>();
         for (int x = 0; x < rows; x++)
             for (int y = 0; y < cols; y++)
             {
-                set.add(targetGrid[x][y]);
+                grid.add(targetGrid[x][y]);
                 temp[x][y] = targetGrid[x][y];
             }
         //printTable(temp);
 
-        while (!set.isEmpty()) {
-            Iterator<Integer> it = set.iterator();
+        while (!grid.isEmpty()) {
+            Iterator<Integer> iterator = grid.iterator();
             boolean flag = false;
-            while (it.hasNext()) {
-                int next = it.next();
+            while (iterator.hasNext()) {
+                int next = iterator.next();
                 if (findRectangle(targetGrid, next)) {
-                    it.remove();
+                    iterator.remove();
                     flag = true;
                 }
             }
             if (!flag)
                 break;
         }
-        return set.isEmpty();
+        return grid.isEmpty();
     }
 
 }
