@@ -21,6 +21,7 @@ public class ex02 {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
+    static int[][] test_test = {{1,1,1,1},{1,2,2,1},{1,2,2,1},{1,1,1,1}};
     static int[][] tets_true = {{1, 1, 1, 1}, {1, 1, 3, 3}, {1, 1, 3, 4}, {5, 5, 1, 4}};
     static int[][] test_false = {{1, 2, 1}, {2, 1, 2}, {1, 2, 1}};
     static int rows;
@@ -28,8 +29,8 @@ public class ex02 {
 
     public static void main(String[] args) {
         //[[1,1,1,1],[1,1,3,3],[1,1,3,4],[5,5,1,4]]
-        System.out.println(isPrintable(tets_true));
-        System.out.println(isPrintable(test_false));
+        System.out.println(isPrintable(test_test));
+        //System.out.println(isPrintable(test_false));
     }
 
     static void printTable(int[][] targetGrid) {
